@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class SimstationPanel extends AppPanel {
 
-
+	
 	public SimstationPanel(AppFactory factory) {
 		super(factory);
 		
