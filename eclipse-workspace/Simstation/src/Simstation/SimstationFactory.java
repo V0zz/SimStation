@@ -5,7 +5,7 @@ import mvc.*;
 public class SimstationFactory implements AppFactory {
 	public Model makeModel() 
 	{ 
-		return new Simulation(); 
+		return new Simulation("test");
 	}
 
 	public String[] getEditCommands() 
@@ -15,15 +15,15 @@ public class SimstationFactory implements AppFactory {
 
 	public Command makeEditCommand(Model model, String type)
 	{
-		if (type == "Start")
+		if (type.equals("Start"))
 			return new StartCommand(model);
-		else if (type == "Suspend")
+		else if (type.equals("Suspend"))
 			return new SuspendCommand(model);
-		else if (type == "Resume")
+		else if (type.equals("Resume"))
 			return new ResumeCommand(model);
-		else if (type == "Stop")
+		else if (type.equals("Stop"))
 			return new StopCommand(model);
-		else if (type == "Stats")
+		else if (type.equals("Stats"))
 			return new StatsCommand(model);
 		
 		return null;

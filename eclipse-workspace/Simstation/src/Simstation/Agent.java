@@ -1,7 +1,8 @@
 package Simstation;
 
+import java.io.Serializable;
 
-public abstract class Agent {
+public abstract class Agent implements Runnable, Serializable {
 	private String name;		//name of the agent
 	private Heading heading;	//Agent heading
 	private AgentState state;	//state
