@@ -2,17 +2,12 @@ package Simstation;
 
 import mvc.*;
 
-public class Simulation extends Model {
+public class Simulation extends Model implements Runnable {
 	public static Integer WORLD_SIZE = 250; // height & width of the world (& view)
 	protected long clock;
-	protected String name;
 	private AgentState state;
 	private Thread thread;
 	
-	public Simulation(String name) {
-		this.name = name;
-		Simulation();
-	}
 	public Simulation() {
 		clock = 0;
 		state = AgentState.READY;
