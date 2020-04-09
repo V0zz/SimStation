@@ -2,6 +2,7 @@ package Simstation;
 
 
 public abstract class Agent {
+	public static Integer AGENT_SIZE = 5; 	//size of each agent
 	private String name;		//name of the agent
 	private Heading heading;	//Agent heading
 	private AgentState state;	//state
