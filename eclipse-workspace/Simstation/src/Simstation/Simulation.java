@@ -9,7 +9,7 @@ public class Simulation extends Model {
 	protected String name;
 	private AgentState state;
 	private Thread thread;
-	private Agent[] agents;
+	private List<Agent> agents;
 	
 	public Simulation(String name) {
 		this.name = name;
@@ -31,6 +31,7 @@ public class Simulation extends Model {
 	}
 
 	public synchronized void start() {
+		populate();
 		for(Agent a : agents)
 			a.start();
 	}
@@ -49,10 +50,14 @@ public class Simulation extends Model {
 	public void stats() {
 
 	}
-	public void getNeighbor(Agent nextAgent) {
-		
+	public void getNeighbor(Agent findNext) {
+		int initialIndex = agents.indexOf(findNext);
+		//If the agent is the last one, return the first
+		if(initialIndex == agents.size() - 1)
+			return agents.get(0);
+		//Otherwise return the next
+		else
+			return agents.get(initialIndex + 1);
 	}
-	public void populate() {
-		
-	}
+	public void populate() { }
 }
