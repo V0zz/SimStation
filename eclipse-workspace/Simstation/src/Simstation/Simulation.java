@@ -8,7 +8,6 @@ public class Simulation extends Model {
 	protected int clock;
 	protected String name;
 	private AgentState state;
-	private Thread thread;
 	private List<Agent> agents;
 	
 	public Simulation(String name) {
@@ -31,26 +30,30 @@ public class Simulation extends Model {
 	}
 
 	public synchronized void start() {
+		state = AgentState.READY;
 		populate();
 		for(Agent a : agents)
 			a.start();
 	}
 	public synchronized void suspend() {
+		state = AgentState.SUSPENDED;
 		for(Agent a : agents)
 			a.suspend();
 	}
 	public synchronized void resume() {
+		state = AgentState.READY;
 		for(Agent a : agents)
 			a.resume();
 	}
 	public synchronized void stop() {
+		state = AgentState.STOPPED;
 		for(Agent a : agents)
 			a.stop();
 	}
 	public void stats() {
 
 	}
-	public void getNeighbor(Agent findNext) {
+	public Agent getNeighbor(Agent findNext) {
 		int initialIndex = agents.indexOf(findNext);
 		//If the agent is the last one, return the first
 		if(initialIndex == agents.size() - 1)

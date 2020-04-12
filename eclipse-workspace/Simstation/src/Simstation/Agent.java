@@ -7,26 +7,47 @@ public abstract class Agent implements Runnable, Serializable {
 	private String name;		//name of the agent
 	private Heading heading;	//Agent heading
 	private AgentState state;	//state
+	private Thread thread;
 	private int xc; 	//x coordinate
 	private int yc;		//y coordinate
 	
 	public void run() {
-		while (state.equals(AgentState.RUNNING))
-		{
-
+		thread = Thread.currentThread();
+		while (!isStopped()) {
+			update();
+			try {
+				Thread.sleep(100);
+				synchronized(this) {
+					while(isSuspended()) {
+						wait();
+					}
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
-	public void start() {
-		this.state = AgentState.READY;
+	public synchronized void start() {
+		thread = new Thread(this);
+		thread.start();
+		state = AgentState.READY;
 	}
-	public void suspend() {
-		this.state = AgentState.SUSPENDED;
+	public synchronized void suspend() {
+		state = AgentState.SUSPENDED;
 	}
-	public void resume() {
-		this.state = AgentState.READY;
+	public synchronized  boolean isSuspended() {
+		return state == AgentState.SUSPENDED;
 	}
-	public void stop() {
-		this.state = AgentState.STOPPED;
+	public synchronized void resume() {
+		state = AgentState.READY;
+	}
+	public synchronized void stop() {
+		if(!isStopped())
+			notify();
+		state = AgentState.STOPPED;
+	}
+	public synchronized boolean isStopped() {
+		return state == AgentState.STOPPED;
 	}
 	public abstract void update();
 	
