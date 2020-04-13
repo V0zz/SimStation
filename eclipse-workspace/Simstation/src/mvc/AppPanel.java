@@ -12,8 +12,8 @@ public class AppPanel extends JPanel implements PropertyChangeListener, ActionLi
 	protected AppFactory factory;
 	protected Set<View> views;
 	private JFrame frame;
-	public static int FRAME_WIDTH = 500;
-	public static int FRAME_HEIGHT = 300;
+	public static int FRAME_WIDTH = 600;
+	public static int FRAME_HEIGHT = 350;
 
 	public AppPanel(AppFactory factory) {
 		super();
