@@ -9,6 +9,7 @@ public class SimstationPanel extends AppPanel {
 	
 	public SimstationPanel(AppFactory factory) {
 		super(factory);
+		//View view = factory.getView(model);
 		
 		this.setLayout(new GridLayout(1, 2));
 		
@@ -54,9 +55,11 @@ public class SimstationPanel extends AppPanel {
 		
 	}
 	
-	public static void main(String[] args) {
-		AppPanel panel = new SimstationPanel(new SimstationFactory());
-		panel.display();
-	}
+	
+	/*
+	 * public static void main(String[] args) { AppPanel panel = new
+	 * SimstationPanel(new SimstationFactory()); panel.display(); }
+	 */
+	 
 	
 }

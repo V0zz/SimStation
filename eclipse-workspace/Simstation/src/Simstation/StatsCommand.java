@@ -2,6 +2,7 @@ package Simstation;
 
 import mvc.Command;
 import mvc.Model;
+import mvc.Utilities;
 
 public class StatsCommand extends Command {
 
@@ -12,7 +13,8 @@ public class StatsCommand extends Command {
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		Simulation sim = (Simulation) model;
+		Utilities.inform(sim.getStats());
 
 	}
 

@@ -2,17 +2,22 @@ package Simstation;
 
 import mvc.*;
 
-public class SimstationFactory implements AppFactory {
+/* public class SimstationFactory implements SimFactory { */
+public class SimstationFactory implements SimFactory {
+	
+	@Override
 	public Model makeModel() 
 	{ 
-		return new Simulation(); 
+		return new Simulation();
 	}
 
+	@Override
 	public String[] getEditCommands() 
 	{ 
 		return new String[] {"Start", "Suspend", "Resume", "Stop", "Stats"};
 	}
 
+	@Override
 	public Command makeEditCommand(Model model, String type)
 	{
 		if (type == "Start")
@@ -28,7 +33,8 @@ public class SimstationFactory implements AppFactory {
 		
 		return null;
 	}
-
+	
+	@Override
 	public String getTitle() 
 	{ 
 		return "SimStation"; 
@@ -44,8 +50,17 @@ public class SimstationFactory implements AppFactory {
 		cmmds[4] = "Stats";
 		return cmmds;	}
 
+	@Override
 	public String about()
 	{
 		return "SimStation version 1.0. Copyright 2020 by Cyberdellic Designs";
+	}
+
+
+
+	@Override
+	public View getView(Model model) {
+		// TODO Auto-generated method stub
+		return new SimstationView(model);
 	}
 }

@@ -12,7 +12,8 @@ public class StopCommand extends Command {
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		Simulation sim = (Simulation) model;
+		sim.stop();
 
 	}
 

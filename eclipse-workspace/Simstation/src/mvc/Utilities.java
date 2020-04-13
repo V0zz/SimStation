@@ -126,4 +126,9 @@ public class Utilities {
 	
 	public static Random rng = new Random(System.currentTimeMillis());
 
+	public static String getID() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
