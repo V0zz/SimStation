@@ -6,21 +6,21 @@ import java.awt.*;
 //import java.util.Iterator;
 
 public class SimstationView extends View {
-
+	public static int BOX_X_CORNER = 5;
+	public static int BOX_Y_CORNER = 5;
+	public static int LINE_THICKNESS = 3;
 	public SimstationView(Model model) {
 		super(model);
 		
 	}
-	public void paintComponent(Graphics gc) {
+	public void paintComponent(Graphics gc) {		//only plague overwrites
 		Simulation sim = (Simulation)model;
 		Color oldColor = gc.getColor();
-		//gc.fillOval(12,  12, 15, 15);
-		//Iterator<sim.Point> it = sim.iterator();
-		//while(it.hasNext()) {
-			//sim.Point point = it.next();
-			//gc.setColor(point.color);
-			//gc.fillOval(point.x,  point.y, 5, 5);
-		//}
+		
+		Graphics2D g2 = (Graphics2D)gc;
+		Color strokeColor = Color.BLACK;
+		g2.setStroke(new BasicStroke(LINE_THICKNESS));
+		g2.drawRect(BOX_X_CORNER, BOX_Y_CORNER, Simulation.WORLD_SIZE, Simulation.WORLD_SIZE);
 		
 		gc.setColor(oldColor);
 	}

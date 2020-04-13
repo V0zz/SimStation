@@ -9,7 +9,7 @@ public class SimstationPanel extends AppPanel {
 	
 	public SimstationPanel(AppFactory factory) {
 		super(factory);
-		
+
 		this.setLayout(new GridLayout(1, 2));
 		
 		JPanel buttons = new JPanel();
@@ -47,10 +47,13 @@ public class SimstationPanel extends AppPanel {
 		p.add(b);
 		buttons.add(p);
 		
-		this.add(buttons);
+		JPanel westPanel = new JPanel();
+		westPanel.setLayout(new BorderLayout());
+		westPanel.add(buttons, "North");
+		this.add(westPanel, "West");
 		SimstationView view = new SimstationView((Simulation)model);
-		this.add(view);
-		//addView(view);
+		addView(view);
+		this.add(view, "East");
 		
 	}
 	

@@ -14,7 +14,7 @@ public class View extends JComponent implements PropertyChangeListener {
 		this.model = model;
 		model.addPropertyChangeListener(this);
 		// optional border around the view component
-		setBorder(LineBorder.createBlackLineBorder());
+		//setBorder(LineBorder.createBlackLineBorder());
 	}
 	
 	public Model getModel() {
