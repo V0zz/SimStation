@@ -12,8 +12,10 @@ public class SuspendCommand extends Command {
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
-
+		if(model.getClass() == Simulation.class) {
+			Simulation sim = (Simulation)model;
+			sim.suspend();
+		}
 	}
 
 }

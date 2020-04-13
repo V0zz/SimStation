@@ -11,16 +11,10 @@ public class SimstationView extends View {
 		super(model);
 		
 	}
-	public void paintComponent(Graphics gc) {
+	public void paintComponent(Graphics gc) {		//only plague overwrites
 		Simulation sim = (Simulation)model;
 		Color oldColor = gc.getColor();
-		//gc.fillOval(12,  12, 15, 15);
-		//Iterator<sim.Point> it = sim.iterator();
-		//while(it.hasNext()) {
-			//sim.Point point = it.next();
-			//gc.setColor(point.color);
-			//gc.fillOval(point.x,  point.y, 5, 5);
-		//}
+
 		
 		gc.setColor(oldColor);
 	}
