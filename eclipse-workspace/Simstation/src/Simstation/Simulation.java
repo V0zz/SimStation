@@ -78,13 +78,13 @@ public class Simulation extends Model {
 			
 			double diffAX = Math.abs(a.getX() - thisX);
 			double diffAY = Math.abs(a.getY() - thisY);
-			double distAthis = Math.sqrt((diffAX * diffAX) + (diffAY * diffAY));
+			double distAtThis = Math.sqrt((diffAX * diffAX) + (diffAY * diffAY));
 			
 			double diffNearX = Math.abs(nextAgent.getX() - thisX);
 			double diffNearY = Math.abs(nextAgent.getY() - thisY);
-			double distNearthis = Math.sqrt((diffNearX * diffNearX) + (diffNearY * diffNearY));
+			double distNearThis = Math.sqrt((diffNearX * diffNearX) + (diffNearY * diffNearY));
 			
-			if(distAthis < distNearthis) {
+			if(distAtThis < distNearThis) {
 				nextAgent = a;
 			}
 		}
@@ -92,7 +92,7 @@ public class Simulation extends Model {
 	}
 
 	public void populate() {		//write in the demos
-		
+
 	}
 
 	private void startTimer() {
