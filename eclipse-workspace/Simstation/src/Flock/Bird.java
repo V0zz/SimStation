@@ -27,7 +27,7 @@ public class Bird extends Agent {
 		}
 		
 		move(speed);
-		world.changed();
+		simulation.changed();
 		
 	}
 	

@@ -12,8 +12,9 @@ public class Simulation extends Model {
 	private Timer timer;
 	protected int clock;
 	public Simulation() {
-		this.agents = new ArrayList<>();
-		//agents = new ArrayList<Agent>();
+		super();
+		//this.agents = new ArrayList<>();
+		agents = new ArrayList<Agent>();
 		clock = 0;
 		timer = new Timer();
 		new Thread();
@@ -21,8 +22,11 @@ public class Simulation extends Model {
 	}
 	
 	public void addAgent(Agent a) {
-		agents.add(a);
-		a.setWorld(this);
+		
+			agents.add(a);
+			
+		
+		
 	}
 	
 	public synchronized Agent getNeighbor(Agent asker, double radius) {

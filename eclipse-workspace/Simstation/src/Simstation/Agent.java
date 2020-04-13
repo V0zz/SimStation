@@ -1,3 +1,4 @@
+
 package Simstation;
 
 import java.io.Serializable;
@@ -85,7 +86,7 @@ public abstract class Agent implements Runnable, Serializable {
 
 	
 	  public synchronized boolean finished() 
-	  { return (state == AgentState.STOPPED) || myThread != null && myThread.getState() != null; }
+	  { return (state == AgentState.STOPPED) || myThread != null && myThread.getState() == Thread.State.TERMINATED; }
 	 
 	 
 	public synchronized boolean inSuspended() {
@@ -162,5 +163,10 @@ public abstract class Agent implements Runnable, Serializable {
 	public int getYCoordinate() {
 		// TODO Auto-generated method stub
 		return yc;
+	}
+	
+	public double getDistance(Agent a) {
+		return Math.sqrt(Math.pow(this.xc - a.xc,2) + Math.pow(this.yc - a.yc , 2));
+		
 	}
 }

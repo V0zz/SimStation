@@ -7,7 +7,7 @@ public class Drunks extends Agent {
 	
 	private int speed;
 	public final int SPEED  = 10;
-	public final int RADIUS = 40;
+
 	public Drunks(Simulation sim) {
 		super(sim);
 		this.heading = Heading.random();
@@ -18,6 +18,7 @@ public class Drunks extends Agent {
 	@Override
 	public void update() {
 		heading = Heading.random();
+		move(speed);
 		speed = Utilities.rng.nextInt(SPEED);
 		
 	}

@@ -41,7 +41,7 @@ public class Plauge extends Agent
 	@Override
 	public void update() {
 		
-		Plauge neighbor = (Plauge)world.getNeighbor(this, radius);
+		Plauge neighbor = (Plauge)simulation.getNeighbor(this, radius);
 		if (neighbor != null ) {
 		if(this.isInfected() && !neighbor.isResistant()) {
 			neighbor.infected = true;

@@ -28,7 +28,7 @@ public class PlaugeSim extends Simulation
 			  }
 			  
 		  }
-		  String[] stats = new String[2];
+		  String[] stats = new String[3];
 		  stats[0] = "# agents = " +agents.size();
 		  stats[1] = "clock = " + clock;
 		  stats[2] = "Precent of infected: " + Math.round(count/POP_SIZE *100);
