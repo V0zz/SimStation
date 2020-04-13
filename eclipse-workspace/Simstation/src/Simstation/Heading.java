@@ -10,5 +10,4 @@ public enum Heading {
 		int random = Utilities.rng.nextInt(3);
 		return h[random];
 	}
-	
 }

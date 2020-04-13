@@ -14,5 +14,4 @@ public class StopCommand extends Command {
 		Simulation sim = (Simulation) model;
 		sim.stop();
 	}
-
 }

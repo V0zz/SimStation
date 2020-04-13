@@ -2,8 +2,11 @@ package Simstation;
 
 import mvc.*;
 
+
 import java.awt.*;
-//import java.util.Iterator;
+import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class SimstationView extends View {
 	public static int BOX_X_CORNER = 5;
@@ -11,6 +14,7 @@ public class SimstationView extends View {
 	public static int LINE_THICKNESS = 3;
 	public SimstationView(Model model) {
 		super(model);
+		setSize(Simulation.SIZE,Simulation.SIZE);
 		
 	}
 	public void paintComponent(Graphics gc) {		//only plague overwrites

@@ -12,10 +12,7 @@ public class StatsCommand extends Command {
 
 	@Override
 	public void execute() {
-		if(model.getClass() == Simulation.class) {
-			Simulation sim = (Simulation)model;
-			Utilities.inform(sim.getStats());
-		}
+		Simulation sim = (Simulation) model;
+		Utilities.inform(sim.getStats());
 	}
-
 }

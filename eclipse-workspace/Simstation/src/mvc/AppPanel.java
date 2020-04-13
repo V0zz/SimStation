@@ -7,7 +7,7 @@ import java.util.*;
 import javax.swing.*;
 
 public class AppPanel extends JPanel implements PropertyChangeListener, ActionListener  {
-
+	private static final long serialVersionUID = 1L;
 	protected Model model;
 	protected AppFactory factory;
 	protected Set<View> views;

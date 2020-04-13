@@ -1,10 +1,13 @@
 package Simstation;
+import java.util.*;
+
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import mvc.*;
+
 
 public class Simulation extends Model {
 	private static final long serialVersionUID = 1L;
@@ -23,13 +26,13 @@ public class Simulation extends Model {
 		timer = new Timer();
 	}
 	
-	public void start() {
+	public synchronized void start() {
 		for(Agent a : agents)
 			a.start();
 		changed();
 	}
 
-	public void suspend() {
+	public synchronized void suspend() {
 		if(agents.get(0).getState() == AgentState.STOPPED) {
 			Utilities.error("Is stopped");
 			return;
@@ -40,7 +43,7 @@ public class Simulation extends Model {
 		changed();
 	}
 
-	public void resume() {
+	public synchronized void resume() {
 		if(agents.get(0).getState() == AgentState.STOPPED) {
 			Utilities.error("Is stopped");
 			return;
@@ -51,13 +54,14 @@ public class Simulation extends Model {
 		changed();
 	}
 
-	public void stop() {
+	public synchronized void stop() {
 		stopTimer();
-		for(Agent a : agents)
+		for(Agent a : agents) {
 			a.stop();
-		changed();
+		}
+		
+		 changed(); 
 	}
-
 	public String[] getStats() {
 		  String[] stats = new String[2];
 		  stats[0] = "#agents = " + agents.size();
