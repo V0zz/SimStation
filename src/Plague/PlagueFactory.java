@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Arlan, 4/10: created PlagueFactory
+ *
+*/
 package Plague;
 
 import Simstation.*;
