@@ -1,3 +1,10 @@
+/*
+ * Edit history:
+ *   Veida, 4/1: created Simulation, start, stop, resume, suspend, populate, getneighbor, ArrayList 
+ *   Arlan, 4/2: added startTimer, stopTimer, ClockUpdater
+ *   Dylan, 4/8: made changes to getneighbor, Simulation, Suspend and Resume
+ *
+*/
 package Simstation;
 import java.util.*;
 
