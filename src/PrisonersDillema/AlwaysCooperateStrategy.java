@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Dylan, 4/12: created AlwaysCooperateStrategy
+ *
+*/
 package PrisonersDillema;
 
 public class AlwaysCooperateStrategy extends Strategy {
