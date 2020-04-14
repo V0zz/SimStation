@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Veida, 4/8: created DrunkPanel
+ *
+*/
 package Drunks;
 
 import Simstation.*;
