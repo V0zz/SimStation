@@ -1,4 +1,14 @@
-
+/*
+ * Edit history:
+ *   Veida, 4/1: created Agent Class
+ *   Veida, 4/1: created Agent, run, stop, start, suspend, resume, getState, getX, getY,
+ *   Arnal, 4/1: added getDistance, outOfBoundsAdapter, join
+ *   Dylan, 4/1: added move, update 
+ *   Veida, 4/2: added synchronized
+ *   Dylan, 4/2: fixed run 
+ *    
+ *
+*/
 package Simstation;
 
 import java.io.Serializable;
