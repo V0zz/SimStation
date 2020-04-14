@@ -1,3 +1,8 @@
+/*
+* Veida, 4/1: Created SimstationFactory
+* Arlan 4/10: added implements SimFactory, getView 
+* 
+*/
 package Simstation;
 
 import mvc.*;
