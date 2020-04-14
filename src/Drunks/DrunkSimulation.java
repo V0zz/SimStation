@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Veida, 4/8: created DrunkSimulation
+ *
+*/
 package Drunks;
 
 import Simstation.*;
