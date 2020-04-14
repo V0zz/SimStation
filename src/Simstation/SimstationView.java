@@ -17,7 +17,7 @@ public class SimstationView extends View {
 		setSize(Simulation.WORLD_SIZE,Simulation.WORLD_SIZE);
 		
 	}
-	public void paintComponent(Graphics gc) {		//only plague overwrites
+	public void paintComponent(Graphics gc) {
 		super.paintComponent(gc);
 
 		Graphics2D g2 = (Graphics2D) gc;

@@ -50,10 +50,10 @@ public class SimstationPanel extends AppPanel {
 		westPanel.setLayout(new BorderLayout());
 		westPanel.add(buttons, "North");
 		this.add(westPanel, "West");
-		SimstationView view = new SimstationView((Simulation)model);
+
+		View view = factory.getView(model);
 		addView(view);
 		this.add(view, "East");
-		
 	}
 	
 	

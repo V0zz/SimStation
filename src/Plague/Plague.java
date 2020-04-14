@@ -8,24 +8,20 @@ public class Plague extends Agent
 	private boolean resistant;
 	private int speed;
 	double radius = 20;
-	
-	
 
-	
 	public Plague(Simulation sim)
 	{
 		super(sim); 
 		
 		int luck = mvc.Utilities.rng.nextInt(100);
 		resistant = luck < PlagueSim.RESISTANCE;
+		heading = Heading.randomHeading();
 		speed = mvc.Utilities.rng.nextInt(5);
 		infected();
 		
 		/*
 		 * if(Utilities.rng.nextInt(100) + 1 < 10) { isInfected = true; } else
 		 * isInfected = false;
-		 * 
-		 * heading = Heading.random();
 		 */
 	}
 
@@ -51,9 +47,8 @@ public class Plague extends Agent
 		}
 		
 		}
-		
-		move(speed);
 		heading = Heading.randomHeading();
+		move(speed);
 		world.changed();
 		
 	}
