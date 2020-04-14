@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Veida, 4/1: created StopCommand
+ *
+*/
 package Simstation;
 
 import mvc.Command;
