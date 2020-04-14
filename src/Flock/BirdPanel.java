@@ -1,7 +1,7 @@
 /*
  * Edit history:
  *   Veida, 4/8: created BirdPanel
- *
+ *   Arlan, 4/10: Changed to SimFactory
 */
 package Flock;
 
