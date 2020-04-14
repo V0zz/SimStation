@@ -1,7 +1,7 @@
 /*
  * Edit history:
  *   Veida, 4/8: created DrunkSimulation
- *
+ *   Veida, 4/8: added population amd the size of the population
 */
 package Drunks;
 
