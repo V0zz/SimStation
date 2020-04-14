@@ -1,3 +1,6 @@
+/*
+* Veida, 4/1: created Heading, randomHeading
+*/
 package Simstation;
 
 import mvc.Utilities;
