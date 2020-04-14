@@ -3,7 +3,7 @@
  *   Veida, 4/1: created Simulation, start, stop, resume, suspend, populate, getneighbor, ArrayList 
  *   Arlan, 4/2: added startTimer, stopTimer, ClockUpdater
  *   Dylan, 4/8: made changes to getneighbor, Simulation, Suspend and Resume
- *
+ *	 Arlan, 4/14: added clear arraylist on start, to prevent over populating
 */
 package Simstation;
 import java.util.*;
@@ -33,6 +33,7 @@ public class Simulation extends Model {
 	}
 	
 	public synchronized void start() {
+		agents.clear();
 		populate();
 		startTimer();
 		for(Agent a : agents)
