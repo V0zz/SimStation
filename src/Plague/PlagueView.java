@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Arlan, 4/10: created Plague
+ *   Dylan, 4/11: fixed a paintComponent bug
+*/
 package Plague;
 
 import java.awt.*;
