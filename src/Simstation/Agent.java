@@ -2,7 +2,7 @@
  * Edit history:
  *   Veida, 4/1: created Agent Class
  *   Veida, 4/1: created Agent, run, stop, start, suspend, resume, getState, getX, getY,
- *   Arnal, 4/1: added getDistance, outOfBoundsAdapter, join
+ *   Arlan, 4/1: added getDistance, outOfBoundsAdapter, join
  *   Dylan, 4/1: added move, update 
  *   Veida, 4/2: added synchronized
  *   Dylan, 4/8: fixed run bug
@@ -93,16 +93,16 @@ public abstract class Agent implements Runnable, Serializable {
 	}
 	
 	private void outOfBoundsAdapter() {
-		if(yc > Simulation.WORLD_SIZE + SimstationView.BOX_Y_CORNER ) {	//If turtle hits south border
+		if(yc > Simulation.WORLD_SIZE + SimstationView.BOX_Y_CORNER ) {	//If agent hits south border
 			yc = yc - Simulation.WORLD_SIZE;
 		}
-		else if(yc < SimstationView.BOX_Y_CORNER ) {		//If turtle hits north border
+		else if(yc < SimstationView.BOX_Y_CORNER ) {		//If agent hits north border
 			yc = yc + Simulation.WORLD_SIZE;
 		}
-		else if(xc > Simulation.WORLD_SIZE + SimstationView.BOX_X_CORNER ) {		//If turtle hits east border 
+		else if(xc > Simulation.WORLD_SIZE + SimstationView.BOX_X_CORNER ) {		//If agent hits east border 
 			xc = xc - Simulation.WORLD_SIZE;
 		}
-		else if(xc < SimstationView.BOX_X_CORNER) {		//If turtle hits west border
+		else if(xc < SimstationView.BOX_X_CORNER) {		//If agent hits west border
 			xc = xc + Simulation.WORLD_SIZE;
 		}
 	}

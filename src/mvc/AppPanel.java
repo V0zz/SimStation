@@ -1,5 +1,7 @@
 package mvc;
-
+/*Edit History
+ * Arlan, 4/3: Changed Frame Window size
+ */
 import java.awt.*;
 import java.awt.event.*;
 import java.beans.*;

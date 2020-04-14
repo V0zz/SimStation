@@ -1,5 +1,8 @@
 package mvc;
-
+/*Edit History
+ * 
+ * Arlan 4/3: Commented out setBorder
+ */
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.io.*;
