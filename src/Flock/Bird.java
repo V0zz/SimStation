@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Veida, 4/8: created Bird
+ *
+*/
 package Flock;
 
 import Simstation.*;
@@ -7,7 +12,7 @@ public class Bird extends Agent {
 
 	private int speed;
 	public final int SPEED = 10;
-	public final int RADIUS = 40;
+	public final int RADIUS = 10;
 	
 	
 	public Bird(Simulation sim) {
