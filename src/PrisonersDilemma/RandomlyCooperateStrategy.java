@@ -3,14 +3,14 @@
  *   Dylan, 4/12: created RandomlyCooperateStrategy
  *
 */
-package PrisonersDillema;
-
-import java.util.Random;
+package PrisonersDilemma;
 
 public class RandomlyCooperateStrategy extends Strategy {
+
     public RandomlyCooperateStrategy(Prisoner owner) {
         super(owner);
     }
+
 
     @Override
     public boolean doICooperate() {

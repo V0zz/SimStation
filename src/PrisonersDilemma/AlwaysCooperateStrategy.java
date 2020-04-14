@@ -3,12 +3,14 @@
  *   Dylan, 4/12: created AlwaysCooperateStrategy
  *
 */
-package PrisonersDillema;
+package PrisonersDilemma;
 
 public class AlwaysCooperateStrategy extends Strategy {
+
     public AlwaysCooperateStrategy(Prisoner owner) {
         super(owner);
     }
+
 
     @Override
     public boolean doICooperate() {

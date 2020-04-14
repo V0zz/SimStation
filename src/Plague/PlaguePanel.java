@@ -12,13 +12,12 @@ public class PlaguePanel extends SimstationPanel{
 
 	public PlaguePanel(SimFactory factory) {
 		super(factory);
-		
 	}
-	
+
+
 	public static void main (String[] args) {
 		SimFactory factory = new PlagueFactory();
 		SimstationPanel panel = new SimstationPanel(factory);
 		panel.display();
 	}
-
 }

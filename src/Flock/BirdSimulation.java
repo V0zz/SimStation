@@ -7,12 +7,15 @@ package Flock;
 
 import Simstation.*;
 
-public class BirdSim extends Simulation {
+public class BirdSimulation extends Simulation {
+
 	public static final int POP_SIZE = 50;
 
-	public BirdSim(String name) {
+
+	public BirdSimulation(String name) {
 		super(name);
 	}
+
 
 	@Override
 	public void populate() {
@@ -20,5 +23,4 @@ public class BirdSim extends Simulation {
 			agents.add(new Bird(this));
 		}
 	}
-
 }

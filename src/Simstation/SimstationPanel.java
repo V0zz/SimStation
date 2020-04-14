@@ -1,7 +1,8 @@
 /*
  * Edit history:
 * Veida, 4/1: created Simstation Panel
-* Arlan: 4/11: commented out main, added: View view = factory.getView(model);
+* Dylan: 4/11: commented out main, added: View view = factory.getView(model);
+*
 */
 
 

@@ -11,9 +11,11 @@ public class DrunkSimulation extends Simulation {
 
 	public static final int POP_SIZE = 50;
 
+
 	public DrunkSimulation(String name) {
 		super(name);
 	}
+
 
 	@Override
 	public void populate() {

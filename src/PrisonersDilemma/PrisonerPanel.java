@@ -3,7 +3,7 @@
  *   Dylan, 4/12: created PrisonerPanel
  *
 */
-package PrisonersDillema;
+package PrisonersDilemma;
 
 import Simstation.SimFactory;
 import Simstation.SimstationPanel;

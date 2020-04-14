@@ -3,7 +3,7 @@
  *   Dylan, 4/12: created Prisoner
  *
 */
-package PrisonersDillema;
+package PrisonersDilemma;
 
 import Simstation.Agent;
 import Simstation.Heading;

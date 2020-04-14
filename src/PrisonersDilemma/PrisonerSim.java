@@ -3,20 +3,22 @@
  *   Dylan, 4/12: created PrisonerSim
  *
 */
-package PrisonersDillema;
+package PrisonersDilemma;
 
 import Simstation.Agent;
 import Simstation.Simulation;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class PrisonerSim extends Simulation {
+
     public static final int STRATEGY_POP_SIZE = 10;
+
     private List<String> strategyClasses;
+
 
     public PrisonerSim(String name) {
         super(name);
@@ -26,6 +28,7 @@ public class PrisonerSim extends Simulation {
         strategyClasses.add("CopyLastStrategy");
         strategyClasses.add("RandomlyCooperateStrategy");
     }
+
 
     public void populate() {
        for (int i = 0; i < STRATEGY_POP_SIZE; i++) {

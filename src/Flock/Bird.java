@@ -10,16 +10,17 @@ import mvc.Utilities;
 
 public class Bird extends Agent {
 
-	private int speed;
-	public final int SPEED = 10;
+	public final int MAX_SPEED = 10;
 	public final int RADIUS = 10;
-	
-	
+
+	private int speed;
+
+
 	public Bird(Simulation sim) {
-		
 		super(sim);
-		this.speed = Utilities.rng.nextInt(SPEED) + 1;
+		this.speed = Utilities.rng.nextInt(MAX_SPEED) + 1;
 	}
+
 
 	@Override
 	public void update() {
@@ -32,7 +33,6 @@ public class Bird extends Agent {
 		
 		move(speed);
 		world.changed();
-		
 	}
 	
 	public int getSpeed() {

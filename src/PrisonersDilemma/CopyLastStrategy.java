@@ -3,12 +3,14 @@
  *   Dylan, 4/12: created CopyLastStrategy
  *
 */
-package PrisonersDillema;
+package PrisonersDilemma;
 
 public class CopyLastStrategy extends Strategy {
+
     public CopyLastStrategy(Prisoner owner) {
         super(owner);
     }
+
 
     @Override
     public boolean doICooperate() {

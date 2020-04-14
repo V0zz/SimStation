@@ -7,15 +7,16 @@ package Plague;
 
 import Simstation.*;
 
-public class Plague extends Agent
-{
+public class Plague extends Agent {
+
+	private static final double RADIUS = 20;
+
 	private boolean infected;
 	private boolean resistant;
 	private int speed;
-	double radius = 20;
 
-	public Plague(Simulation sim)
-	{
+
+	public Plague(Simulation sim) {
 		super(sim); 
 		
 		int luck = mvc.Utilities.rng.nextInt(100);
@@ -23,38 +24,29 @@ public class Plague extends Agent
 		heading = Heading.randomHeading();
 		speed = mvc.Utilities.rng.nextInt(5);
 		infected();
-		
-		/*
-		 * if(Utilities.rng.nextInt(100) + 1 < 10) { isInfected = true; } else
-		 * isInfected = false;
-		 */
 	}
 
+
 	private void infected() {
-	if(!resistant) {
-		int luck = mvc.Utilities.rng.nextInt(100);
-		this.infected = (luck < PlagueSim.VIRULENCE);
-	}
-		
+		if(!resistant) {
+			int luck = mvc.Utilities.rng.nextInt(100);
+			this.infected = (luck < PlagueSim.VIRULENCE);
+		}
 	}
 
 	@Override
 	public void update() {
-		Plague neighbor = (Plague) world.getNeighbor(this, radius);
+		Plague neighbor = (Plague) world.getNeighbor(this, RADIUS);
 		if (neighbor != null ) {
-		if(this.isInfected() && !neighbor.isResistant()) {
-			neighbor.infected = true;
-		}
-		
-		else if (!this.isResistant() && neighbor.isInfected()) {
-			this.infected = true;
-		}
-		
+			if(this.isInfected() && !neighbor.isResistant()) {
+				neighbor.infected = true;
+			} else if (!this.isResistant() && neighbor.isInfected()) {
+				this.infected = true;
+			}
 		}
 		heading = Heading.randomHeading();
 		move(speed);
 		world.changed();
-		
 	}
 	
 	public boolean isInfected() {
@@ -63,10 +55,5 @@ public class Plague extends Agent
 	
 	public boolean isResistant() {
 		return resistant;
-		
 	}
-	
-	
-		  
-		
 }

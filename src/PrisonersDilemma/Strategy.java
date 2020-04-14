@@ -3,8 +3,7 @@
  *   Dylan, 4/12: created Strategy
  *
 */
-package PrisonersDillema;
-
+package PrisonersDilemma;
 
 public abstract class Strategy {
     protected Prisoner owner;

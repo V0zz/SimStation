@@ -30,11 +30,10 @@ public class Simulation extends Model {
 		timer = new Timer();
 		clock = 0;
 		agents = new ArrayList<Agent>();
-		populate();
-		start();
 	}
 	
 	public synchronized void start() {
+		populate();
 		startTimer();
 		for(Agent a : agents)
 			a.start();

@@ -3,15 +3,17 @@
  *   Dylan, 4/12: created PrisonerFactory
  *
 */
-package PrisonersDillema;
+package PrisonersDilemma;
 
 import Simstation.SimstationFactory;
 import mvc.Model;
 
 public class PrisonerFactory extends SimstationFactory {
+
     public PrisonerFactory() {
         super();
     }
+
 
     @Override
     public Model makeModel() {
