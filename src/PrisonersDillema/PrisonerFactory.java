@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Dylan, 4/12: created PrisonerFactory
+ *
+*/
 package PrisonersDillema;
 
 import Simstation.SimstationFactory;
