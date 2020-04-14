@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Dylan, 4/12: created Prisoner
+ *
+*/
 package PrisonersDillema;
 
 import Simstation.Agent;
