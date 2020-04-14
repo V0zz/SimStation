@@ -13,7 +13,6 @@ public class Bird extends Agent {
 	public Bird(Simulation sim) {
 		
 		super(sim);
-		this.heading = Heading.randomHeading();
 		this.speed = Utilities.rng.nextInt(SPEED) + 1;
 	}
 

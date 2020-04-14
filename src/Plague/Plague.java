@@ -35,7 +35,6 @@ public class Plague extends Agent
 
 	@Override
 	public void update() {
-		
 		Plague neighbor = (Plague) world.getNeighbor(this, radius);
 		if (neighbor != null ) {
 		if(this.isInfected() && !neighbor.isResistant()) {
