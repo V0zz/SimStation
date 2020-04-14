@@ -35,7 +35,7 @@ public class Simulation extends Model {
 	public synchronized void start() {
 		agents.clear();
 		populate();
-		startTimer();
+		restartTimer();
 		for(Agent a : agents)
 			a.start();
 		changed();
@@ -136,16 +136,22 @@ public class Simulation extends Model {
 	private void startTimer() {
 		   timer = new Timer();
 	       timer.scheduleAtFixedRate(new ClockUpdater(), 1000, 1000);
-	    }
+	}
 
-	    private void stopTimer() {
-		  timer.cancel();
-		  timer.purge();
-	  }
+	private void stopTimer() {
+		timer.cancel();
+		timer.purge();
+	}
 
-	  private class ClockUpdater extends TimerTask {
-		  public void run() {
+	private void restartTimer() {
+		timer.cancel();
+		timer.purge();
+		clock = 0;
+		startTimer();
+	}
+	private class ClockUpdater extends TimerTask {
+		public void run() {
 			  clock++;
 		  }
-	  }
+	}
 }
