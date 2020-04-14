@@ -1,3 +1,10 @@
+/*
+ * Edit history:
+ *   Veida, 4/1: created SimstationView
+ *   Dylan, 4/3: minor changes to PaintComponent
+ *   
+ *
+*/
 package Simstation;
 
 import mvc.*;
