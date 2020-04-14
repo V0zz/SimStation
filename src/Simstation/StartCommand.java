@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Veida, 4/1: created StartCommand, execute
+ *
+*/
 package Simstation;
 
 import mvc.Command;
