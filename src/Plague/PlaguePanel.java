@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Arlan, 4/10: created PlaguePanel
+ *
+*/
 package Plague;
 
 import Simstation.*;
