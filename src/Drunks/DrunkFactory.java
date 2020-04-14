@@ -1,7 +1,7 @@
 /*
  * Edit history:
  *   Veida, 4/8: created DrunkFactory
- *
+ *   Veida, 4/8: added "Drunk Simulation"
 */
 package Drunks;
 
