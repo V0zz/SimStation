@@ -5,7 +5,7 @@
  *   Arnal, 4/1: added getDistance, outOfBoundsAdapter, join
  *   Dylan, 4/1: added move, update 
  *   Veida, 4/2: added synchronized
- *   Dylan, 4/2: fixed run 
+ *   Dylan, 4/8: fixed run bug
  *    
  *
 */
