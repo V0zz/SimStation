@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Dylan, 4/12: created RandomlyCooperateStrategy
+ *
+*/
 package PrisonersDillema;
 
 import java.util.Random;
