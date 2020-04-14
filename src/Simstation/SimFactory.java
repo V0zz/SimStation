@@ -1,4 +1,5 @@
 /*
+* Edit history:
 * Arlan, 4/10: created SimFactory
 * 
 */
