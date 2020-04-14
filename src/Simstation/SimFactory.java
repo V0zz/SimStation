@@ -1,3 +1,7 @@
+/*
+* Arlan, 4/10: created SimFactory
+* 
+*/
 package Simstation;
 
 import mvc.*;
