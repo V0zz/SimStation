@@ -1,3 +1,8 @@
+/*
+ * Edit history:
+ *   Dylan, 4/12: created PrisonerPanel
+ *
+*/
 package PrisonersDillema;
 
 import Simstation.SimFactory;
